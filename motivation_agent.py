@@ -3,21 +3,13 @@ from langchain_groq import ChatGroq
 import os
 from dotenv import load_dotenv
 import random
-
-# Load variables from .env file
 load_dotenv()
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
-
-# Create and configure model only once
 chat = ChatGroq(
     temperature=0.2,
     model_name="llama-3.1-8b-instant",
     groq_api_key=GROQ_API_KEY
 )
-
-# Static system prompt
-
-# Prompt variations
 
 
 def generate_motivational_quote(topic: str = None, stream: bool = False):
