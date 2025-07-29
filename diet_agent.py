@@ -15,7 +15,7 @@ def suggest_diet(name: str, email: str) -> str:
     )
 
     if not patient:
-        return f"❌ No patient found with name '{name}' and email '{email}'."
+        return f"No patient found with name '{name}' and email '{email}'."
 
     symptoms = patient.get("symptoms", [])
     conditions = patient.get("conditions", [])
